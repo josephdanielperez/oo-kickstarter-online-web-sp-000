@@ -11,6 +11,9 @@ class Project
     @backers << backer
     if backer.name == backer
       backer.back_project(self)
+    else backer.name == nil
+      Backer.new(backer)
+      backer.back_project(self)
     end
   end
 
