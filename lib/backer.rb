@@ -9,7 +9,7 @@ class Backer
 
   def back_project(project)
     @backed_projects << project
-    if project.name == project
+    if project.title == project
       project.add_backer(self)
     else Project.new(project)
       project.add_backer(self)
